@@ -1,0 +1,56 @@
+variables:
+  CI_REGISTRY: $CI_REGISTRY
+  CI_REGISTRY_IMAGE: $CI_REGISTRY_IMAGE
+  CI_REGISTRY_IMAGE_PROXY: $CI_REGISTRY_IMAGE_PROXY
+  CI_REGISTRY_USER: $CI_REGISTRY_USER
+  CI_REGISTRY_PASSWORD: $CI_REGISTRY_PASSWORD
+  SSH_PRIVATE_KEY: $SSH_PRIVATE_KEY
+  SSH_USER_AND_IP: $SSH_USER_AND_IP
+
+stages:
+  - test
+  - build
+  - deploy
+
+test:
+  image: docker:latest
+  stage: test
+  services:
+    - docker:dind
+  script:
+    - chmod +x ./init_env.sh
+    - ./init_env.sh dev
+    - docker compose -f docker-compose.yml -f docker-compose.dev.yml up app -d --build
+    - docker compose -f docker-compose.yml -f docker-compose.dev.yml exec app python manage.py test accounts articles pages
+
+build:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  before_script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+  script:
+    - docker build -t "$CI_REGISTRY_IMAGE" ./app
+    - docker push "$CI_REGISTRY_IMAGE"
+    - docker build -t "$CI_REGISTRY_IMAGE_PROXY" ./nginx
+    - docker push "$CI_REGISTRY_IMAGE_PROXY"
+  only:
+    - main
+
+deploy:
+  image: alpine
+  stage: deploy
+  before_script:
+    - apk add openssh-client
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+  script:
+    - ssh -o StrictHostKeyChecking=no $SSH_USER_AND_IP "cd data/; docker compose down --rmi all"
+    - ssh -o StrictHostKeyChecking=no $SSH_USER_AND_IP "cd data/; rm -f start.sh init_env.sh docker-compose.yml docker-compose.override.yml"
+    - scp -o StrictHostKeyChecking=no start.sh init_env.sh docker-compose.yml docker-compose.override.yml $SSH_USER_AND_IP:~/data
+    - ssh -o StrictHostKeyChecking=no $SSH_USER_AND_IP "cd data/; chmod +x ./start.sh; ./start.sh"
+  only:
+    - main

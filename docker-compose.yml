@@ -1,0 +1,16 @@
+services:
+  nginx:
+    restart: always
+    ports:
+      - 80:80
+    depends_on:
+      - app
+
+  app:
+    environment:
+      - SECRET_KEY
+      - DEBUG
+      - DJANGO_SETTINGS_MODULE
+    restart: always
+    expose:
+      - 8080

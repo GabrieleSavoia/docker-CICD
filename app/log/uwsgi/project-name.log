@@ -1,0 +1,143 @@
+*** Starting uWSGI 2.0.21 (64bit) on [Mon Dec 26 22:57:09 2022] ***
+compiled with version: 12.2.0 on 26 December 2022 21:49:18
+os: Linux-6.1.1-arch1-1 #1 SMP PREEMPT_DYNAMIC Wed, 21 Dec 2022 22:27:55 +0000
+nodename: cicciarch
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 16
+current working directory: /home/cicciodev/GIT/UNIMORE/2023/CEC/03-base-projects/blog/django-blog
+writing pidfile to /tmp/project-name.pid
+detected binary path: /home/cicciodev/GIT/UNIMORE/2023/CEC/03-base-projects/blog/django-blog/venv/bin/uwsgi
+chdir() to /home/cicciodev/GIT/UNIMORE/2023/CEC/03-base-projects/blog/django-blog
+your processes number limit is 126808
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+Python version: 3.10.8 (main, Nov  1 2022, 14:18:21) [GCC 12.2.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55e6745eb530
+The -s/--socket option is missing and stdin is not a socket.
+*** Starting uWSGI 2.0.21 (64bit) on [Mon Dec 26 23:00:03 2022] ***
+compiled with version: 12.2.0 on 26 December 2022 21:49:18
+os: Linux-6.1.1-arch1-1 #1 SMP PREEMPT_DYNAMIC Wed, 21 Dec 2022 22:27:55 +0000
+nodename: cicciarch
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 16
+current working directory: /home/cicciodev/GIT/UNIMORE/2023/CEC/03-base-projects/blog/django-blog
+writing pidfile to /tmp/project-name.pid
+detected binary path: /home/cicciodev/GIT/UNIMORE/2023/CEC/03-base-projects/blog/django-blog/venv/bin/uwsgi
+chdir() to /home/cicciodev/GIT/UNIMORE/2023/CEC/03-base-projects/blog/django-blog
+your processes number limit is 126808
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8080 fd 3
+Python version: 3.10.8 (main, Nov  1 2022, 14:18:21) [GCC 12.2.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x564cee6e8530
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x564cee6e8530 pid: 64887 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 64887)
+spawned uWSGI worker 1 (pid: 64891, cores: 1)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+...brutally killing workers...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/cicciodev/GIT/UNIMORE/2023/CEC/03-base-projects/blog/django-blog
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (127.0.0.1:8080)
+running /home/cicciodev/GIT/UNIMORE/2023/CEC/03-base-projects/blog/django-blog/venv/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.21 (64bit) on [Mon Dec 26 23:01:45 2022] ***
+compiled with version: 12.2.0 on 26 December 2022 21:49:18
+os: Linux-6.1.1-arch1-1 #1 SMP PREEMPT_DYNAMIC Wed, 21 Dec 2022 22:27:55 +0000
+nodename: cicciarch
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 16
+current working directory: /home/cicciodev/GIT/UNIMORE/2023/CEC/03-base-projects/blog/django-blog
+detected binary path: /home/cicciodev/GIT/UNIMORE/2023/CEC/03-base-projects/blog/django-blog/venv/bin/uwsgi
+chdir() to /home/cicciodev/GIT/UNIMORE/2023/CEC/03-base-projects/blog/django-blog
+your processes number limit is 126808
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 127.0.0.1:8080 fd 3
+Python version: 3.10.8 (main, Nov  1 2022, 14:18:21) [GCC 12.2.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x561edb01d320
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x561edb01d320 pid: 64887 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 64887)
+spawned uWSGI worker 1 (pid: 65138, cores: 1)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/cicciodev/GIT/UNIMORE/2023/CEC/03-base-projects/blog/django-blog
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (127.0.0.1:8080)
+running /home/cicciodev/GIT/UNIMORE/2023/CEC/03-base-projects/blog/django-blog/venv/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.21 (64bit) on [Mon Dec 26 23:02:02 2022] ***
+compiled with version: 12.2.0 on 26 December 2022 21:49:18
+os: Linux-6.1.1-arch1-1 #1 SMP PREEMPT_DYNAMIC Wed, 21 Dec 2022 22:27:55 +0000
+nodename: cicciarch
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 16
+current working directory: /home/cicciodev/GIT/UNIMORE/2023/CEC/03-base-projects/blog/django-blog
+detected binary path: /home/cicciodev/GIT/UNIMORE/2023/CEC/03-base-projects/blog/django-blog/venv/bin/uwsgi
+chdir() to /home/cicciodev/GIT/UNIMORE/2023/CEC/03-base-projects/blog/django-blog
+your processes number limit is 126808
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 127.0.0.1:8080 fd 3
+Python version: 3.10.8 (main, Nov  1 2022, 14:18:21) [GCC 12.2.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x556946a1c320
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x556946a1c320 pid: 64887 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 64887)
+spawned uWSGI worker 1 (pid: 65199, cores: 1)
+Mon Dec 26 23:02:13 2022 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
