@@ -1,6 +1,3 @@
-# Distributed Filesystem with JavaRMI University Project
+# Docker and CICD University Project
 
-In this project is used JavaRMI for model a distributed filesystem.
-
-* **codice/**: folder containing the code of the project;
-* **AlgoritmiDistribuiti.pdf**: pdf containing project description; 
+In this project is used Docker in order to create dev and ops environment for Django app. CICD techniques are also used for automating test and deploy on EC2.
